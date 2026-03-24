@@ -1,0 +1,36 @@
+HCS - Hytale Control Suite
+
+Version: 1.1.0
+Release: Public Build (CurseForge)
+Status: Stable
+
+Author:
+Project 
+
+
+Main Components:
+- Controller Core
+- Web Dashboard
+- Discord Integration
+- Mod Manager
+- Runtime Logging System
+- PM2 Process Manager
+- Install & Configuration Wizard
+
+Build Notes:
+- Modular controller
+- Dashboard and Discord integration
+- Server control system (start/stop/restart)
+- Mod upload, remove, restore and delete
+- Scheduled shutdown system
+- Clean runtime environment on startup
+- Guided installation and configuration
+
+Credits:
+- Node.js
+- PM2
+- Discord.js
+- Express.js
+
+Basic Usage:
+install.bat -> configure.bat -> start.bat
