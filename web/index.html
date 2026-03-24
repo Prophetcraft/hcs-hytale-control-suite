@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>HCS - Hy Control Room</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oxanium:wght@500;600;700;800&display=swap"
+  rel="stylesheet"
+/>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <p class="eyebrow">Hytale Control Suite</p>
+        <h1 class="brand-title">Hy Control Room</h1>
+        <p class="brand-subtitle">Remote bridge for server control, monitoring and mod operations.</p>
+      </div>
+
+      <div class="topbar-actions">
+        <button id="refreshBtn" class="btn btn-secondary">Refresh</button>
+      </div>
+    </header>
+
+    <main class="dashboard-grid">
+      <section class="panel hero-panel">
+        <div class="hero-header">
+          <div>
+            <p class="section-label">Server Status</p>
+            <h2 class="section-title">Live Overview</h2>
+          </div>
+          <div id="serverStatusBadge" class="status-badge status-offline">OFFLINE</div>
+        </div>
+
+        <div class="hero-stats-grid">
+          <div class="stat-card">
+            <span class="stat-label">Controller RAM</span>
+            <strong id="controllerRam">--</strong>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-label">Uptime</span>
+            <strong id="controllerUptime">--</strong>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-label">Server RAM</span>
+            <strong id="serverRam">--</strong>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-label">Tracked PID</span>
+            <strong id="trackedPid">--</strong>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <button id="startBtn" class="btn btn-success">Start</button>
+          <button id="stopBtn" class="btn btn-danger">Stop</button>
+          <button id="restartBtn" class="btn btn-warning">Restart</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <p class="section-label">System</p>
+        <h2 class="section-title">Machine Resources</h2>
+
+        <div class="info-list">
+          <div class="info-row">
+            <span>CPU Load</span>
+            <strong id="cpuLoad">--</strong>
+          </div>
+
+          <div class="info-row">
+            <span>Hostname</span>
+            <strong id="hostname">--</strong>
+          </div>
+
+          <div class="info-row">
+            <span>RAM Used</span>
+            <strong id="systemRamUsed">--</strong>
+          </div>
+
+          <div class="info-row">
+            <span>RAM Free</span>
+            <strong id="systemRamFree">--</strong>
+          </div>
+
+          <div class="info-row">
+            <span>RAM Total</span>
+            <strong id="systemRamTotal">--</strong>
+          </div>
+        </div>
+
+        <div class="disk-block">
+          <h3>Disks</h3>
+          <div id="diskList" class="disk-list">
+            <div class="muted">No disk information available.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <p class="section-label">Server Control</p>
+        <h2 class="section-title">Meta Information</h2>
+
+        <div class="info-list">
+          <div class="info-row">
+            <span>Last Action</span>
+            <strong id="lastAction">--</strong>
+          </div>
+
+          <div class="info-row">
+            <span>Last Error</span>
+            <strong id="lastError">--</strong>
+          </div>
+
+          <div class="info-row">
+            <span>Last Start</span>
+            <strong id="lastStartTime">--</strong>
+          </div>
+
+          <div class="info-row">
+            <span>Last Stop</span>
+            <strong id="lastStopTime">--</strong>
+          </div>
+
+          <div class="info-row">
+            <span>Refresh Interval</span>
+            <strong id="refreshInterval">--</strong>
+          </div>
+        </div>
+
+        <div class="shutdown-actions">
+          <button id="shutdownBtn" class="btn btn-danger ghost-danger">Schedule Shutdown</button>
+          <button id="abortShutdownBtn" class="btn btn-secondary">Abort Shutdown</button>
+        </div>
+      </section>
+
+      <section class="panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="section-label">Mods</p>
+            <h2 class="section-title">Mod Management</h2>
+          </div>
+        </div>
+
+        <div class="upload-box">
+          <input id="modFileInput" type="file" />
+          <button id="uploadBtn" class="btn btn-primary">Upload Mod</button>
+        </div>
+
+        <div class="mods-grid">
+          <div class="mods-column">
+            <h3>Active Mods</h3>
+            <div id="activeMods" class="mod-list"></div>
+          </div>
+
+          <div class="mods-column">
+            <h3>Removed Mods</h3>
+            <div id="removedMods" class="mod-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="section-label">Runtime</p>
+            <h2 class="section-title">Recent Actions</h2>
+          </div>
+        </div>
+
+        <div id="actionsLog" class="log-viewer"></div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
