@@ -1,0 +1,15 @@
+# HCS Future updates
+
+## Version 1.2
+- Automatic server restart on crash
+- Backup system
+- Download logs from dashboard
+- Install mods from URL
+
+- Update checker?
+
+## Version 2.0
+- Multi-server support?
+- User login system?
+- Permission system?
+- Live console via WebSocket?
