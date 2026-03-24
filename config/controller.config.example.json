@@ -1,0 +1,14 @@
+{
+  "controllerName": "HCS Controller",
+  "token": "PUT_DISCORD_TOKEN_HERE",
+  "targetChannelId": "PUT_CHANNEL_ID_HERE",
+  "serverPath": "PUT_SERVER_PATH_HERE",
+  "configPath": "PUT_CONFIG_JSON_PATH_HERE",
+  "serverExe": "PUT_SERVER_EXE_HERE",
+  "webPort": 3000,
+  "dashboardPublicUrl": "http://127.0.0.1:3000",
+  "statusRefreshMs": 3000,
+  "allowShutdownCommands": false,
+  "shutdownDelayMinutes": 30,
+  "allowedDiscordUserIds": []
+}
