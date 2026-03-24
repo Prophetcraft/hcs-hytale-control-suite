@@ -1,0 +1,20 @@
+{
+    "Group": "ShortMemoryProject",
+    "Name": "HyControlSuite",
+    "Version": "1.1.0",
+    "Description": "HCS - Remote Management Bridge for Hytale Servers (Dashboard + Discord + Mod Manager)",
+    "Authors": [
+        {
+            "Name": "Short Memory Project"
+        }
+    ],
+    "ServerVersion": "*",
+    "Dependencies": {},
+    "Controller": {
+        "Entry": "controller.js",
+        "WebPort": 3000,
+        "HasDashboard": true,
+        "HasDiscordBot": true,
+        "HasModManager": true
+    }
+}
