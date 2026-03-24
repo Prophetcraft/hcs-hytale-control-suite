@@ -35,7 +35,7 @@ a web dashboard and a Discord bot into a single control system.
 3. Run scripts/start.bat
 4. Open dashboard in your browser
 
-## Discord Commands in libked bot text channel
+## Discord Commands in linked bot text channel
 
 !start
 !stop
