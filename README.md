@@ -1,9 +1,14 @@
 # HCS - Hytale Control Suite
 
-I created this "mod" out of necessity: 
-when I wasn't physically present at the PC for work and my friends wanted to play on the server we built, 
-I just had to start the PC and the controller. This way they could start and manage the mods themselves. 
-Then I thought: what if the PC is left on all night? That's how the controller was born, with various scripts to manage server mods, and even start and stop the PC.
+Why HCS was born:
+
+I created this suite out of necessity. As a lighting technician often away for work, my friends couldn't access our server unless I was physically at my PC. I needed a way for them to manage mods and server states independently.
+
+​Then I realized: leaving a PC running 24/7 isn't ideal. That’s how the HCS Controller evolved—integrating smart scripts to monitor resources, manage mods, and handle remote startup/shutdown to protect the hardware and save energy.
+
+So this project started as a personal tool, but I decided to clean it up and release it publicly 
+in case it can be useful for other Hytale server owners.
+
 
 HCS is a server managemens that combines a Node.js controller,
 a web dashboard and a Discord bot into a single control system.
