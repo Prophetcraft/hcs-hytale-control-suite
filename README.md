@@ -49,7 +49,9 @@ a web dashboard and a Discord bot into a single control system.
 !shut
 !abort
 
-## I'm still improving the project, so if you have any feedback, suggestions and ideas please let me know.
+## Bugs
+
+I'm still improving the project, so if you have any feedback, suggestions and ideas please let me know.
 
 ## Release
 
